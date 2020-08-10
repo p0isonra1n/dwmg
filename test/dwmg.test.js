@@ -6,7 +6,8 @@ var manifest = new DWMG({
     start_url: "start_url",
     display: DWMG.displayTypes.standalone,
     background_color: "#000000",
-    description: "description"
+    description: "description",
+    theme_color: "#FFFFFF"
 });
 
 manifest.addIcon("/image.png", "48x48");
@@ -23,6 +24,7 @@ test('All Variables set correctly', () =>{
     expect(exported.display).toEqual(DWMG.displayTypes.standalone);
     expect(exported.background_color).toEqual("#000000");
     expect(exported.description).toEqual("description");
+    expect(exported.theme_color).toEqual("#FFFFFF");
     expect(exported.icons.length).toBeGreaterThan(1);
 });
 
