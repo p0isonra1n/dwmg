@@ -1,5 +1,3 @@
-const displayTypes = require('./displayTypes.js');
-
 class DWMG {
 
     manifest = {
@@ -7,7 +5,22 @@ class DWMG {
         shortcuts: []
     };
 
-    static displayTypes = displayTypes;
+    static displayTypes = {
+        fullscreen: "fullscreen",
+        standalone: "standalone",
+        minimal_ui: "minimal-ui",
+        browser: "browser"};
+
+    static orientationTypes = {
+        any: "any",
+        natural: "natural",
+        landscape: "landscape",
+        landscape_primary: "landscape-primary",
+        landscape_secondary: "landscape-secondary",
+        portrait: "portrait",
+        portrait_primary: "portrait-primary",
+        portrait_secondary: "portrait-secondary"
+    };
 
     constructor(options = {}){
         this.manifest.name = options.name;
@@ -17,6 +30,7 @@ class DWMG {
         this.manifest.background_color = options.background_color;
         this.manifest.description = options.description;
         this.manifest.theme_color = options.theme_color;
+        this.manifest.orientation = options.orientation;
     }
 
     addIcon(src, sizes, type){

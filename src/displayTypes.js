@@ -1,1 +1,0 @@
-module.exports = {fullscreen: "fullscreen", standalone: "standalone", minimal_ui: "minimal-ui", browser: "browser"};
