@@ -31,6 +31,7 @@ class DWMG {
         this.manifest.description = options.description;
         this.manifest.theme_color = options.theme_color;
         this.manifest.orientation = options.orientation;
+        this.manifest.categories = options.categories;
     }
 
     addIcon(src, sizes, type){

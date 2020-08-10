@@ -8,7 +8,8 @@ var manifest = new DWMG({
     background_color: "#000000",
     description: "description",
     theme_color: "#FFFFFF",
-    orientation: DWMG.orientationTypes.natural
+    orientation: DWMG.orientationTypes.natural,
+    categories: ["category1", "category2"]
 });
 
 manifest.addIcon("/image.png", "48x48");
@@ -27,6 +28,9 @@ test('All Variables set correctly', () =>{
     expect(exported.description).toEqual("description");
     expect(exported.theme_color).toEqual("#FFFFFF");
     expect(exported.orientation).toEqual(DWMG.orientationTypes.natural);
+    expect(exported.categories.length).toBeGreaterThan(1);
+    expect(exported.categories[0]).toEqual("category1");
+    expect(exported.categories[1]).toEqual("category2");
     expect(exported.icons.length).toBeGreaterThan(1);
 });
 
