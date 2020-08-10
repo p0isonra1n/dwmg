@@ -1,14 +1,18 @@
 {
   "name": "dwmg",
   "version": "0.0.1",
-  "description": "",
+  "description": "Easy to use generator for Web Manifest with the ablity to export to JSON for use in Dynamic Manifest applications.",
   "main": "src/index.js",
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["PWA", "manifest", "dynamic", "webmanifest"],
+  "author": "p0isonra1n",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/p0isonra1n/dwmg.git"
+  },
   "devDependencies": {
     "jest": "^26.2.2"
   }
