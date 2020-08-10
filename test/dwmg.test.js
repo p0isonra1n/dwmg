@@ -13,7 +13,7 @@ var manifest = new DWMG({
 });
 
 manifest.addIcon("/image.png", "48x48");
-manifest.addIcon("/image2.png", "72x72", "image/png");
+manifest.addIcon("/image2.png", DWMG.iconSizes.x72, "image/png");
 
 manifest.addShortcut("Shortcut1", "/url");
 manifest.addShortcut("Shortcut2", "/url", "Description");

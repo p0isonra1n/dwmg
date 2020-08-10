@@ -22,6 +22,16 @@ class DWMG {
         portrait_secondary: "portrait-secondary"
     };
 
+    static iconSizes = {
+        x48: "48x48",
+        x72: "72x72",
+        x96: "96x96",
+        x144: "144x144",
+        x168: "168x168",
+        x192: "192x192",
+        x512: "512x512"
+    };
+
     constructor(options = {}){
         this.manifest.name = options.name;
         this.manifest.short_name = options.short_name;
