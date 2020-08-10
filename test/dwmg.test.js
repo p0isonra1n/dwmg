@@ -12,6 +12,9 @@ var manifest = new DWMG({
 manifest.addIcon("/image.png", "48x48");
 manifest.addIcon("/image2.png", "72x72", "image/png");
 
+manifest.addShortcut("Shortcut1", "/url");
+manifest.addShortcut("Shortcut2", "/url", "Description");
+
 test('All Variables set correctly', () =>{
     const exported = manifest.exportToJSON();
     expect(exported.name).toEqual("name");
@@ -27,4 +30,10 @@ test("Icon handling of blank type", () => {
     const exported = manifest.exportToJSON();
     expect(exported.icons[0].type).toBeUndefined();
     expect(exported.icons[1].type).toBeDefined();
+});
+
+test("Shortcut handling of blank description", () => {
+    const exported = manifest.exportToJSON();
+    expect(exported.shortcuts[0].description).toBeUndefined();
+    expect(exported.shortcuts[1].description).toBeDefined();
 });
